@@ -68,32 +68,8 @@ typedef WidgetModelFactory<T extends WidgetModel> = T Function(
   BuildContext context,
 );
 
-/// A basic interface for every [WidgetModel].
-///
-/// The general approach for the [WidgetModel] is implement interface that
-/// expanded from [IWidgetModel]. This expanded interface describes the contract
-/// which the inheritor of the [WidgetModel] implemented this interface
-/// is providing for the [ElementaryWidget]. The contract includes all
-/// properties and methods which the [ElementaryWidget] can use for build a
-/// part of the tree it describes.
-///
-/// {@tool snippet}
-///
-/// The following is a an example for the top-level factory function
-/// that get dependencies using passed BuildContext.
-///
-/// ```dart
-/// abstract interface class IExampleWidgetModel implements IWidgetModel {
-///   ListenableState<int> get somePublisher;
-///   Stream<String> get anotherPublisher;
-///   Color get justProperty;
-///
-///   Future<void> doSomething();
-///   Future<void> anotherOptionOfInteract();
-/// }
-/// ```
-/// {@end-tool}
-abstract interface class IWidgetModel {}
+/// Base interface for all Widget Model.
+abstract class IWidgetModel {}
 
 /// A widget that uses state of [WidgetModel] properties to
 /// build a part of the user interface described by this widget.
