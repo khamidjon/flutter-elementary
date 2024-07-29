@@ -14,7 +14,10 @@ dependencies:
     sdk: flutter
   flutter_test:
     sdk: flutter
-  elementary: ^3.0.0
+  elementary:
+    git:
+      url: https://github.com/khamidjon/flutter-elementary.git
+      path: packages/elementary
   mocktail: ^1.0.0
   meta: ^1.8.0
 
